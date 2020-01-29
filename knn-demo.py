@@ -125,6 +125,12 @@ def test():
     predict_value = knn_classifier(new_value, dataset, labels, k_value)
     print("新值:", new_value, ",KNN投票预测结果是:", predict_value)
 
+    # 批量预测
+    vars_value = [[2, 2, 2], [2, 3, 4], [6, 6, 6], [9, 9, 1]]
+    for i in vars_value:
+        predict_value = knn_classifier(i, dataset, labels, k_value)
+        print("新值:", i, ",KNN投票预测结果是:", predict_value)
+
 
 if __name__ == '__main__':
     test()
